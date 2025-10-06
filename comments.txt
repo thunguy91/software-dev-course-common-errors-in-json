@@ -1,0 +1,31 @@
+IDENTIFY SYNTAX ERRORS:
+  • What was wrong?
+  • Why is it a problem in JSON?
+  • What did you change to fix it?
+
+1. There is a variable declaration using const.
+    This is a problem because variable declaration is not valid in JSON.
+    To fix this, I removed const, enclosed invalidBookingJSON in double quotation marks, added a colon. 
+    Also added a curly brace in front of it. So it looks like:
+    {"invalidBookingJSON" : {...
+
+2. Missing comma between "checkInDate" and "checkOutDate".
+    This is a problem because JSON requires commas between properties.
+    To fix this, I added a comma after "2024-05-15".
+
+3. Unquoted property name in "guests" array at index 0.
+    This is a problem because JSON keys must always be in double quotes.
+    To fix this, I wrapped double quotation marks around name. -> "name": "Alice Johnson"
+
+4. In "guests" array, at index 1, "age" value is "undefined".
+    This is a problem because undefined is not valid in JSON.
+    To fix this, I changed undefined to "null".
+
+5. In "roomDetails" object, the key property "amenities" array has a trailing comma.
+    This is a problem because JSON does not allow trailing commas.
+    To fix this, I removed the comma after "Parking".
+
+6. There are backticks in the code.
+    This is a problem because backticks are not valid in JSON.
+    To fix this, I simply removed both backticks.
+
